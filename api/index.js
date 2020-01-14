@@ -1,6 +1,5 @@
 import express from 'express'
 import { Sequelize } from 'sequelize'
-import consola from 'consola'
 import config from '../nuxt.config.js'
 import EventModel from './model/Event'
 const Op = Sequelize.Op
@@ -11,7 +10,6 @@ const sequelize = new Sequelize({
 })
 
 const Event = sequelize.define('events', EventModel)
-
 sequelize.sync()
 
 const router = express.Router()
@@ -35,7 +33,6 @@ router.post('/send-event', (req, res) => {
     })
 })
 router.post('/search-event', (req, res) => {
-  consola.log(req.body)
   Event.findAll({
     where: {
       topic: {
@@ -43,7 +40,6 @@ router.post('/search-event', (req, res) => {
       }
     }
   }).then((events) => {
-    consola.log(events)
     if (events.length === 1) {
       return res.json(events)
     } else {
