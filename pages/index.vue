@@ -2,34 +2,25 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
-        nuxt-express-sqlite
-      </h1>
-      <h2 class="subtitle">
-        My sensational Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="description">
+        <event-search />
+        <section-form-events />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SectionFormEvents from '@/components/sectionFormEvents/SectionFormEvents'
+import EventSearch from '@/components/eventSearch/EventSearch'
 import Logo from '~/components/Logo.vue'
+/* eslint-disable */
 
 export default {
   components: {
-    Logo
+    Logo,
+    SectionFormEvents,
+    EventSearch
   }
 }
 </script>
@@ -62,7 +53,7 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
+.description {
   padding-top: 15px;
 }
 </style>

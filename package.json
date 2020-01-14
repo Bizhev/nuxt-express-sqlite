@@ -20,24 +20,34 @@
     }
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "ant-design-vue": "^1.1.10",
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "@nuxtjs/dotenv": "^1.4.0"
+    "ant-design-vue": "^1.1.10",
+    "body-parser": "^1.19.0",
+    "consola": "^2.11.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.0.0",
+    "path": "^0.12.7",
+    "sass-loader": "^8.0.2",
+    "sequelize": "^5.21.3",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
     "husky": "^2.6.0",
     "lint-staged": "^8.2.1",
-    "@nuxtjs/stylelint-module": "^3.1.0",
+    "prettier": "^1.16.4",
     "stylelint": "^10.1.0"
   }
 }

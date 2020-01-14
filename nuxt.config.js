@@ -1,3 +1,9 @@
+import path from 'path'
+import session from 'express-session'
+import bodyParser from 'body-parser'
+/* eslint-disable */
+const dbPath = path.resolve(__dirname, './api/db/base.db')
+
 export default {
   mode: 'spa',
   /*
@@ -15,6 +21,13 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+  /**
+   *   sequelize configuration
+   */
+  db: {
+    dialect: 'sqlite',
+    storage: dbPath
   },
   /*
    ** Customize the progress-bar color
@@ -60,5 +73,19 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'super-secret-key',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
+    // Api middleware
+    // We add /api/login & /api/logout routes
+    '~/api'
+  ]
 }
