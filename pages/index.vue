@@ -5,6 +5,7 @@
       <div class="description">
         <event-search />
         <section-form-events />
+        <nuxt-link to="/events">список событий</nuxt-link>
       </div>
     </div>
   </div>
