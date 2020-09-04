@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "path": "^0.12.7",
     "sass-loader": "^8.0.2",
